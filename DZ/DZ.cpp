@@ -1,42 +1,45 @@
 ﻿#include <iostream> 
 #include <string>
-#include <windows.h> 
+#include <Windows.h> 
 using namespace std;
 int main()
 {
 	int a1 = 60; 
 	int a2 = 60; 
 	int b1 = 25;  
-	int c1 = a1 & b1;
-	int c2 = a1 | b1; 
-	int c3 = a1 - b1; 
-	int c4 = a1 + b1; 
+	int c1 = a1 && b1;
+	int c2 = a1 || b1; 
+	int c3 = a1 -- b1; 
+	int c4 = a1 =+ b1; 
 	int c5 = a1 != b1;
 	int i = 0, b = 5;
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 
 	if (c1 > c3) 
 		{ cout << "true" << endl;; }
-	/*
+
 	if (a1 == 3) 
 		{
-		cout << " " << endl; 
+		cout << " Введите первое число " << endl; 
 		cin >> b1; 
-		cout << " " << endl;
+		cout << " Введите второе число " << endl;
 		cin >> c1; 	
-		int s1
-		cout << " " << s1 << endl;
+		int s1;
+		si = b1 - c1
+		cout << " Разность двух чисел = " << s1 << endl;
 		}
 
 	if (a1 != 5) 
 		{
-		cout << "" << endl; 
+		cout << " Введите первое число " << endl; 
 		cin >> w1;
-		cout << "" << endl; 
+		cout << " Введите второе число " << endl; 
 		cin >> e1;
-		r1 = ; 
-		cout << "" << r1 << endl;
+		r1 = w1 + e1 ; 
+		cout << " Сумма двух чисел = " << r1 << endl;
 		}
-		*/
+		
 	if (a1 > b1 || c2 < c1) 
 		{ 
 		cout << "true" << endl; 
@@ -65,5 +68,5 @@ int main()
 		cout << i1 << endl; 
 		cout << i2 << endl;   
 		b++;
-	}
+	} 
 }
