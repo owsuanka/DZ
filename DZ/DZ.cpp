@@ -1,72 +1,94 @@
-﻿#include <iostream> 
+﻿﻿#include <iostream>
 #include <string>
 #include <Windows.h> 
 using namespace std;
 int main()
 {
-	int a1 = 60; 
-	int a2 = 60; 
-	int b1 = 25;  
-	int c1 = a1 && b1;
-	int c2 = a1 || b1; 
-	int c3 = a1 -- b1; 
-	int c4 = a1 =+ b1; 
-	int c5 = a1 != b1;
-	int i = 0, b = 5;
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
+   SetConsoleCP(1251);
+SetConsoleOutputCP(1251);
+    int arr[3][3] = { {4,-2,9},{1,0,7},{-8,-3,6} };
+    float sum = { 0.0 };
+    float sred = { 0.0 };
+    int count = 0;
+    
 
-	if (c1 > c3) 
-		{ cout << "true" << endl;; }
+    cout << "Положительные эл-ты: ";
+    for (size_t i = 0; i < size(arr); i++)
+    {
+        for (size_t j = 0; j < size(arr); j++)
+        {
+            if (arr[i][j] >= 0)
+            {
+                cout << arr[i][j] << " ";
+            }
+        }
+    }
+    cout << endl;
+     
+    cout << "Отрицательные эл-ты: ";
+    for (size_t i = 0; i < size(arr); i++)
+    {
+        for (size_t j = 0; j < size(arr); j++)
+        {
+            if (arr[i][j] < 0)
+            {
+                cout << arr[i][j] << " ";
+            }
+        }
+    }
+    cout << endl;
 
-	if (a1 == 3) 
-		{
-		cout << " Введите первое число " << endl; 
-		cin >> b1; 
-		cout << " Введите второе число " << endl;
-		cin >> c1; 	
-		int s1;
-		si = b1 - c1
-		cout << " Разность двух чисел = " << s1 << endl;
-		}
 
-	if (a1 != 5) 
-		{
-		cout << " Введите первое число " << endl; 
-		cin >> w1;
-		cout << " Введите второе число " << endl; 
-		cin >> e1;
-		r1 = w1 + e1 ; 
-		cout << " Сумма двух чисел = " << r1 << endl;
-		}
-		
-	if (a1 > b1 || c2 < c1) 
-		{ 
-		cout << "true" << endl; 
-		}
-	else 
-		{ 
-		cout << "false" << endl; 
-		} 
+	
+    cout << "Четные эл-ты: ";
+    for (size_t i = 0; i < size(arr); i++)
+    {
+        for (size_t j = 0; j < size(arr); j++)
+        {
+            if (arr[i][j] %2 == 0)
+            {
+                cout << arr[i][j] << " ";
+            }
+        }
+    }
+    cout << endl;
+    cout << "Нчетные эл-ты: ";
+    for (size_t i = 0; i < size(arr); i++)
+    {
+        for (size_t j = 0; j < size(arr); j++)
+        {
+            if (arr[i][j] % 2 != 0)
+            {
+                cout << arr[i][j] << " ";
+            }
+        }
+    }
+    cout << endl;
 
-	if (c5 < c3 || c5 < c3)
-		{
-		cout << "true" << endl;
-		}
-	else 
-		{ 
-		cout << "false" << endl; 
-		}
 
-	int i1 = 1;
-	int i2 = 1;
-	while (i < 10 && b < 10)
-	{
-		i++; 
-		i1 = i1 + i1;  
-		i2 = i2 + i2;
-		cout << i1 << endl; 
-		cout << i2 << endl;   
-		b++;
-	} 
+	
+    for (size_t i = 0; i < size(arr); i++)
+    {
+        for (size_t j = 0; j < size(arr); j++)
+        {
+            sum += arr[i][j];
+        }
+
+    }
+    cout << "Сумма значений элементов массива: " << sum << endl;
+    
+
+	
+    sum = 0;
+    for (size_t i = 0; i < size(arr); i++)
+    {
+        for (size_t j = 0; j < size(arr); j++)
+        {
+            sum += arr[i][j];
+            count++;
+        }
+
+    }
+    sr = sum / count;
+    cout << "Среднее значение = " << sr << endl;
 }
